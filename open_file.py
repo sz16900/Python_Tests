@@ -1,6 +1,6 @@
 import numpy as np
 
-f = open('track_00000001.txt', 'r')
+f = open('track_00000000.txt', 'r')
 f.next() # lets skip the header
 my_list = list()
 counter = 0

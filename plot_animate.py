@@ -31,7 +31,7 @@ for line in f:
     del my_list[:]
 f.close()
 
-f2 = open('track_00000002.txt', 'r')
+f2 = open('track_00000000.txt', 'r')
 f2.next() # lets skip the header
 my_list2 = list()
 counter2 = 0
@@ -43,7 +43,7 @@ soa2 = np.zeros(shape=(counter2,2))
 counter2 = 0
 i2 = 0;
 
-f2 = open('track_00000002.txt', 'r')
+f2 = open('track_00000000.txt', 'r')
 f2.next() # lets skip the header
 for line2 in f2:
     counter2 = counter2 + 1
@@ -75,8 +75,9 @@ def update(val):
 
     ax.clear()
     i = int(round(sfreq.val))
-    print i
-    # i-1 for bounds check. Doesnt seem work
+
+    # This needs to be a bit more DRY
+
     if i > len(soa)-2:
         print "Reached Boundry"
     else:
