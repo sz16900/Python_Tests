@@ -73,7 +73,6 @@ ax.set_ylim([miny, maxy])
 
 def update(val):
 
-    # This is to have a track or just points
     ax.clear()
     i = int(round(sfreq.val))
 
